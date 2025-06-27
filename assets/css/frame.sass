@@ -1,9 +1,9 @@
 ---
 ---
 
-@import index, font, basic, classes
+@import index, font, basic, layout, classes
 
-// Override layout constraints for narrow column design
+// Clean, simple layout - fix the cutoff issues
 html
   background: #D1D8BE !important
   padding: 0 !important
@@ -15,10 +15,8 @@ body
   margin: 0 !important
   padding: 0 !important
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif !important
-  display: flex !important
-  flex-direction: column !important
 
-// Full width header
+// Fix header - ensure it fits properly
 body > header
   background: #D1D8BE !important
   color: #000000 !important
@@ -27,64 +25,54 @@ body > header
   justify-content: space-between !important
   align-items: center !important
   width: 100% !important
+  box-sizing: border-box !important
   border-bottom: 1px solid rgba(0,0,0,0.1) !important
 
 header .title, header a.title
   color: #000000 !important
   text-decoration: none !important
-  font-size: 1.5rem !important
+  font-size: 1.4rem !important
   font-weight: 600 !important
+  flex-shrink: 0 !important
 
+// Fix navigation - make sure it doesn't overflow
 header nav, header nav ul
   display: flex !important
-  gap: 1.5rem !important
+  gap: 1.25rem !important
   list-style: none !important
   margin: 0 !important
   padding: 0 !important
+  flex-shrink: 0 !important
 
 header nav a
   color: #000000 !important
   text-decoration: none !important
   font-weight: 500 !important
+  white-space: nowrap !important
 
 header nav a:hover
   text-decoration: underline !important
 
-// Narrow column content (like rkayg.com)
+// Content area - nice and readable
 body > article
-  max-width: 600px !important
+  max-width: 700px !important
   margin: 0 !important
-  padding: 2rem !important
+  padding: 2.5rem 2rem !important
   color: #000000 !important
-  text-align: left !important
-  flex-grow: 1 !important
+  line-height: 1.6 !important
 
-// All text left-aligned in narrow column
-article h1, article h2, article h3, article h4, article h5, article h6, article p
-  color: #000000 !important
-  text-align: left !important
-  margin-left: 0 !important
-
-// Remove any centering from other elements
 h1, h2, h3, h4, h5, h6, p, span, div
   color: #000000 !important
 
-// Footer (if you have one)
-body > footer
-  background: #D1D8BE !important
-  color: #000000 !important
-  padding: 1.5rem 2rem !important
-
-// Mobile responsive
+// Mobile fix
 @media (max-width: 768px)
-  body > article
-    max-width: none !important
-    padding: 1.5rem !important
-  
   body > header
     padding: 1rem !important
-    flex-direction: column !important
+    flex-wrap: wrap !important
     gap: 1rem !important
-    
+  
   header nav
     gap: 1rem !important
+    
+  body > article
+    padding: 2rem 1rem !important
