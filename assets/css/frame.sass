@@ -3,32 +3,29 @@
 
 @import index, font, basic, layout, classes
 
-// Color variables
-$green-bg: #D1D8BE
-$black-text: #000000
+// Force green header - direct override
+body > header
+  background: #D1D8BE !important
+  color: #000000 !important
 
+body > header a
+  color: #000000 !important
+
+body > header a:hover
+  color: #333333 !important
+
+// Your existing frame.sass content continues here...
 html
-  background: $green-bg
+  background: #D1D8BE
   padding: 0 calc(38% - 22em)
 
 body
-  background: $green-bg
-  box-shadow: 0 0 .3em darken($green-bg, 15%)
-  color: $black-text
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif
+  box-shadow: 0 0 .3em darken(#D1D8BE, 15%)
+  color: #000000
 
-// Make header green too instead of dark
-body > header, body > footer
-  background: $green-bg
-  color: $black-text
-  border-bottom: 1px solid darken($green-bg, 10%)
-
-// Navigation links in header
-body > header a
-  color: $black-text
-
-body > header a:hover
-  color: darken($black-text, 20%)
+body > footer
+  background: #D1D8BE
+  color: #000000
 
 @media (min-width: 32em)
   body > header, body > article, body > footer
@@ -36,15 +33,14 @@ body > header a:hover
 
 @media (prefers-color-scheme: dark)
   html
-    background: $green-bg
-  
-  body
-    background: $green-bg
-    color: $black-text
+    background: #D1D8BE
   
   body > header, body > footer
-    background: $green-bg
-    color: $black-text
+    background: #D1D8BE !important
+    color: #000000 !important
   
   body, body > header, body > footer
-    box-shadow: 0 0 0 1px darken($green-bg, 20%)
+    box-shadow: 0 0 0 1px darken(#D1D8BE, 15%)
+  
+  body
+    color: #000000
