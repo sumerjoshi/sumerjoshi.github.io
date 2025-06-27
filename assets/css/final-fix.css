@@ -1,0 +1,51 @@
+/* Final fix - override everything */
+html {
+    width: 100vw !important;
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #D1D8BE !important;
+}
+
+body {
+    width: 100vw !important;
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    margin-top: 80px !important;
+    background: #D1D8BE !important;
+    color: #000000 !important;
+}
+
+/* Force header full width */
+header,
+body > header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    max-width: none !important;
+    background: #D1D8BE !important;
+    color: #000000 !important;
+    padding: 1rem 2rem !important;
+    margin: 0 !important;
+    z-index: 1000 !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+/* Content area */
+article,
+body > article {
+    max-width: 800px !important;
+    margin: 2rem auto !important;
+    padding: 2rem !important;
+    background: rgba(255,255,255,0.7) !important;
+    border-radius: 12px !important;
+}
+
+/* All text black */
+h1, h2, h3, h4, h5, h6, p, span, div, a {
+    color: #000000 !important;
+}
