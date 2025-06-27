@@ -17,11 +17,8 @@ show_social: false
 # Menu
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {file: "README.md", title: "About", icon: address-card}
+  - {file: "README.md", title: "About"}
   - {title: "Blog", file: "blog.md"}
-
-external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
-  - {title: Github, icon: github, url: "https://github.com/sumerjoshi"}
   
 
 comments:
