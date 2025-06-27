@@ -3,60 +3,59 @@
 
 @import index, basic, font, classes
 
-// NUCLEAR OVERRIDE - Put everything after imports
+# Clean layout without the problematic layout.sass
 html
   background: #D1D8BE !important
   padding: 0 !important
   margin: 0 !important
+  width: 100% !important
 
 body
   background: #D1D8BE !important
   color: #000000 !important
   margin: 0 !important
   padding: 0 !important
-  max-width: none !important
-  margin-left: 0 !important
-  margin-right: 0 !important
-  margin-top: 80px !important
+  width: 100% !important
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif !important
 
-// Override layout.sass styles
-body > header, body > article, body > footer
-  padding: 0 !important
-
-// Full width header
-body > header
+header
   background: #D1D8BE !important
   color: #000000 !important
-  position: fixed !important
-  top: 0 !important
-  left: 0 !important
-  right: 0 !important
-  width: 100% !important
-  padding: 1rem 2rem !important
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important
-  z-index: 1000 !important
+  padding: 2rem 3rem !important
   display: flex !important
   justify-content: space-between !important
   align-items: center !important
+  width: 100% !important
+  border-bottom: 1px solid rgba(0,0,0,0.1) !important
 
-body > header a
+header .title, header a.title
+  font-size: 1.5rem !important
+  font-weight: 600 !important
   color: #000000 !important
+  text-decoration: none !important
 
-// Content area
-body > article
-  padding: 2rem !important
-  margin: 2rem auto !important
+# Style your existing navigation system
+header nav, header nav ul
+  display: flex !important
+  gap: 2rem !important
+  list-style: none !important
+  margin: 0 !important
+  padding: 0 !important
+
+header nav a, header nav ul a
+  color: #000000 !important
+  text-decoration: none !important
+  font-weight: 500 !important
+
+header nav a:hover, header nav ul a:hover
+  text-decoration: underline !important
+
+article
   max-width: 800px !important
-  background: rgba(255,255,255,0.7) !important
-  border-radius: 12px !important
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important
-
-// Footer
-body > footer
-  background: #D1D8BE !important
+  margin: 0 auto !important
+  padding: 3rem 2rem !important
+  background: transparent !important
   color: #000000 !important
-  padding: 2rem !important
 
-// Force all text to be black
 h1, h2, h3, h4, h5, h6, p, span, div, a
   color: #000000 !important
