@@ -3,6 +3,7 @@
 
 @import index, font, basic, layout, classes
 
+// Define your color variables
 $new-dark: #2C2C2C
 $light: #FFFFFF
 $border-color: #A0B089
@@ -12,18 +13,14 @@ $border-color: #A0B089
     padding: 1.75em calc(40% - 17em)
 
 {% if site.minimal %}
-
 body > header
   background: $new-dark
   color: $light
   border-bottom: 1px solid $border-color
-
 {% else %}
-
 body > header
   box-shadow: 0 0 .6em rgba($new-dark, 0.04)
   border-bottom: 1px solid $border-color
-
 {% endif %}
 
 body > footer

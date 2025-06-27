@@ -3,13 +3,19 @@
 
 @import index, font, basic, layout, classes
 
+// Define your color variables (no semicolons, no $ in front)
+$new-bg: #D1D8BE
+$new-dark: #2C2C2C
+$light: #FFFFFF
+$border-color: #A0B089
+
 html
-  background: $new-bg;
+  background: $new-bg
   padding: 0 calc(38% - 22em)
 
 body
   box-shadow: 0 0 .3em darken($new-bg, 15%)
-  color: #000000;
+  color: #000000
 
 body > header, body > footer
   background: $new-dark
@@ -22,7 +28,12 @@ body > header, body > footer
 @media (prefers-color-scheme: dark)
   html
     background: darken($new-bg, 20%)
+  
   body > header, body > footer
     background: $new-dark
+  
   body, body > header, body > footer
     box-shadow: 0 0 0 1px lighten($new-dark, 15%)
+  
+  body
+    color: #FFFFFF
