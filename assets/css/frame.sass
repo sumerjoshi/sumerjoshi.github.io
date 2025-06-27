@@ -12,17 +12,21 @@ html
 
 @import index, font, basic, layout, classes
 
-// Force green everywhere
+// Remove side margins - make everything full width
 html
   background: #D1D8BE !important
-  padding: 0 calc(38% - 22em)
+  padding: 0
+  margin: 0
 
 body
   background: #D1D8BE !important
-  box-shadow: 0 0 .3em darken(#D1D8BE, 15%)
   color: #000000 !important
+  margin: 0
+  padding: 0
+  max-width: none
+  margin-top: 80px  // Space for fixed header
 
-// Force green header
+// Full width header
 body > header
   background: #D1D8BE !important
   color: #000000 !important
@@ -38,6 +42,7 @@ body > header
   justify-content: space-between
   align-items: center
 
+// Header navigation
 body > header nav
   display: flex
   gap: 2rem
@@ -51,8 +56,8 @@ body > header a:hover
   color: #333333 !important
   text-decoration: underline
 
-// Force green main content area
-body > article, main, .content
+// Content area - centered with padding
+body > article
   max-width: 800px
   margin: 2rem auto
   padding: 2rem
@@ -60,23 +65,36 @@ body > article, main, .content
   border-radius: 12px
   box-shadow: 0 4px 20px rgba(0,0,0,0.1)
 
-// Force green footer
+// Footer
 body > footer
   background: #D1D8BE !important
   color: #000000 !important
+  padding: 2rem
+  text-align: center
 
-// Force all container elements to be green
+// Force green everywhere
 div, section, article, main, aside
-  background-color: #D1D8BE !important
+  background-color: transparent
 
 // Ensure all text is visible
 h1, h2, h3, h4, h5, h6, p, span, div
   color: #000000 !important
 
-@media (min-width: 32em)
-  body > header, body > article, body > footer
-    padding: 1.75em calc(22% - 6em)
+// Responsive design
+@media (max-width: 768px)
+  body > header
+    padding: 1rem
+    flex-direction: column
+    gap: 1rem
+  
+  body > header nav
+    gap: 1rem
+  
+  body > article
+    margin: 1rem
+    padding: 1rem
 
+// Dark mode override
 @media (prefers-color-scheme: dark)
   html
     background: #D1D8BE !important
@@ -89,15 +107,5 @@ h1, h2, h3, h4, h5, h6, p, span, div
     background: #D1D8BE !important
     color: #000000 !important
   
-  body > article, main, .content
-    background: #D1D8BE !important
-    color: #000000 !important
-  
-  div, section, article, main, aside
-    background-color: #D1D8BE !important
-  
   h1, h2, h3, h4, h5, h6, p, span, div
     color: #000000 !important
-  
-  body, body > header, body > footer
-    box-shadow: 0 0 0 1px darken(#D1D8BE, 15%)
