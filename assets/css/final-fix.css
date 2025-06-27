@@ -1,51 +1,125 @@
-/* Final fix - override everything */
+
 html {
-    width: 100vw !important;
+    width: 100% !important;
     max-width: none !important;
     padding: 0 !important;
     margin: 0 !important;
     background: #D1D8BE !important;
+    overflow-x: hidden !important;
 }
 
 body {
-    width: 100vw !important;
+    width: 100% !important;
     max-width: none !important;
     padding: 0 !important;
     margin: 0 !important;
-    margin-top: 80px !important;
     background: #D1D8BE !important;
     color: #000000 !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif !important;
+    overflow-x: hidden !important;
 }
 
-/* Force header full width */
+/* Clean header - not fixed, normal flow */
 header,
 body > header {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100vw !important;
+    position: static !important;
+    width: 100% !important;
     max-width: none !important;
     background: #D1D8BE !important;
     color: #000000 !important;
-    padding: 1rem 2rem !important;
+    padding: 2rem 3rem !important;
     margin: 0 !important;
-    z-index: 1000 !important;
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
+    border-bottom: 1px solid rgba(0,0,0,0.1) !important;
 }
 
-/* Content area */
+/* Header title */
+header .title,
+header a.title {
+    color: #000000 !important;
+    text-decoration: none !important;
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+}
+
+/* Navigation */
+header nav,
+header nav ul {
+    display: flex !important;
+    gap: 2rem !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+header nav a {
+    color: #000000 !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+}
+
+header nav a:hover {
+    color: #333333 !important;
+    text-decoration: underline !important;
+}
+
+/* Content area - NO WHITE BOX */
 article,
 body > article {
     max-width: 800px !important;
-    margin: 2rem auto !important;
-    padding: 2rem !important;
-    background: rgba(255,255,255,0.7) !important;
-    border-radius: 12px !important;
+    margin: 0 auto !important;
+    padding: 3rem 2rem !important;
+    background: transparent !important;
+    color: #000000 !important;
+    text-align: left !important;
 }
 
-/* All text black */
+/* Main content text */
+article p,
+article h1,
+article h2,
+article h3 {
+    color: #000000 !important;
+    background: transparent !important;
+}
+
+/* Make sure all text is readable */
 h1, h2, h3, h4, h5, h6, p, span, div, a {
     color: #000000 !important;
+    background: transparent !important;
+}
+
+/* Footer */
+footer {
+    background: #D1D8BE !important;
+    color: #000000 !important;
+    padding: 2rem 3rem !important;
+    text-align: center !important;
+    border-top: 1px solid rgba(0,0,0,0.1) !important;
+}
+
+footer a {
+    color: #000000 !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    header,
+    body > header {
+        padding: 1.5rem 1rem !important;
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+    
+    header nav,
+    header nav ul {
+        gap: 1rem !important;
+    }
+    
+    article,
+    body > article {
+        padding: 2rem 1rem !important;
+    }
 }
