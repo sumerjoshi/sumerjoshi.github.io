@@ -20,9 +20,9 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "README.md", title: "About", icon: address-card}
   - {title: "Blog", file: "blog.md"}
 
-# Commenting out for now
-#external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
-#  - {title: Github, icon: github, url: "https://github.com/sumerjoshi"}
+external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
+  - {title: Github, icon: github, url: "https://github.com/sumerjoshi"}
+  
 
 comments:
 #  disqus_shortname: ""    # see https://disqus.com/
