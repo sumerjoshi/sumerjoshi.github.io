@@ -3,7 +3,17 @@
 
 @import index, font, basic, layout, classes
 
-// Force green header - direct override
+// Force green everywhere
+html
+  background: #D1D8BE !important
+  padding: 0 calc(38% - 22em)
+
+body
+  background: #D1D8BE !important
+  box-shadow: 0 0 .3em darken(#D1D8BE, 15%)
+  color: #000000 !important
+
+// Force green header
 body > header
   background: #D1D8BE !important
   color: #000000 !important
@@ -14,18 +24,23 @@ body > header a
 body > header a:hover
   color: #333333 !important
 
-// Your existing frame.sass content continues here...
-html
-  background: #D1D8BE
-  padding: 0 calc(38% - 22em)
+// Force green main content area
+body > article, main, .content
+  background: #D1D8BE !important
+  color: #000000 !important
 
-body
-  box-shadow: 0 0 .3em darken(#D1D8BE, 15%)
-  color: #000000
-
+// Force green footer
 body > footer
-  background: #D1D8BE
-  color: #000000
+  background: #D1D8BE !important
+  color: #000000 !important
+
+// Force all container elements to be green
+div, section, article, main, aside
+  background-color: #D1D8BE !important
+
+// Ensure all text is visible
+h1, h2, h3, h4, h5, h6, p, span, div
+  color: #000000 !important
 
 @media (min-width: 32em)
   body > header, body > article, body > footer
@@ -33,14 +48,25 @@ body > footer
 
 @media (prefers-color-scheme: dark)
   html
-    background: #D1D8BE
+    background: #D1D8BE !important
+  
+  body
+    background: #D1D8BE !important
+    color: #000000 !important
   
   body > header, body > footer
     background: #D1D8BE !important
     color: #000000 !important
   
+  body > article, main, .content
+    background: #D1D8BE !important
+    color: #000000 !important
+  
+  div, section, article, main, aside
+    background-color: #D1D8BE !important
+  
+  h1, h2, h3, h4, h5, h6, p, span, div
+    color: #000000 !important
+  
   body, body > header, body > footer
     box-shadow: 0 0 0 1px darken(#D1D8BE, 15%)
-  
-  body
-    color: #000000
