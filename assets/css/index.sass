@@ -3,6 +3,10 @@
 
 @import index, font, basic, layout, classes
 
+$new-dark: #2C2C2C
+$light: #FFFFFF
+$border-color: #A0B089
+
 @media (min-width: 40em)
   body > header, body > article, body > footer
     padding: 1.75em calc(40% - 17em)
@@ -10,19 +14,19 @@
 {% if site.minimal %}
 
 body > header
-  background: $dark
+  background: $new-dark
   color: $light
-  border-bottom: 1px solid reduce(14)
+  border-bottom: 1px solid $border-color
 
 {% else %}
 
 body > header
-  box-shadow: 0 0 .6em rgba($dark, 0.04)
-  border-bottom: 1px solid reduce(14)
+  box-shadow: 0 0 .6em rgba($new-dark, 0.04)
+  border-bottom: 1px solid $border-color
 
 {% endif %}
 
 body > footer
-  box-shadow: 0 0 .6em rgba($dark, 0.04) inset
-  border-top: 1px solid reduce(14)
+  box-shadow: 0 0 .6em rgba($new-dark, 0.04) inset
+  border-top: 1px solid $border-color
   opacity: .9
