@@ -1,111 +1,62 @@
 ---
 ---
 
-body
-  background: #D1D8BE !important
-  background-color: #D1D8BE !important
-  color: #000000 !important
-
-html
-  background: #D1D8BE !important
-  background-color: #D1D8BE !important
-
 @import index, font, basic, layout, classes
 
-// Remove side margins - make everything full width
+// NUCLEAR OVERRIDE - Put everything after imports
 html
   background: #D1D8BE !important
-  padding: 0
-  margin: 0
+  padding: 0 !important
+  margin: 0 !important
 
 body
   background: #D1D8BE !important
   color: #000000 !important
-  margin: 0
-  padding: 0
-  max-width: none
-  margin-top: 80px  // Space for fixed header
+  margin: 0 !important
+  padding: 0 !important
+  max-width: none !important
+  margin-left: 0 !important
+  margin-right: 0 !important
+  margin-top: 80px !important
+
+// Override layout.sass styles
+body > header, body > article, body > footer
+  padding: 0 !important
 
 // Full width header
 body > header
   background: #D1D8BE !important
   color: #000000 !important
-  position: fixed
-  top: 0
-  left: 0
-  right: 0
-  width: 100%
-  padding: 1rem 2rem
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1)
-  z-index: 1000
-  display: flex
-  justify-content: space-between
-  align-items: center
-
-// Header navigation
-body > header nav
-  display: flex
-  gap: 2rem
+  position: fixed !important
+  top: 0 !important
+  left: 0 !important
+  right: 0 !important
+  width: 100% !important
+  padding: 1rem 2rem !important
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important
+  z-index: 1000 !important
+  display: flex !important
+  justify-content: space-between !important
+  align-items: center !important
 
 body > header a
   color: #000000 !important
-  text-decoration: none
-  font-weight: 500
 
-body > header a:hover
-  color: #333333 !important
-  text-decoration: underline
-
-// Content area - centered with padding
+// Content area
 body > article
-  max-width: 800px
-  margin: 2rem auto
-  padding: 2rem
-  background: rgba(255,255,255,0.7)
-  border-radius: 12px
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1)
+  padding: 2rem !important
+  margin: 2rem auto !important
+  max-width: 800px !important
+  background: rgba(255,255,255,0.7) !important
+  border-radius: 12px !important
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important
 
 // Footer
 body > footer
   background: #D1D8BE !important
   color: #000000 !important
-  padding: 2rem
-  text-align: center
+  padding: 2rem !important
 
-// Force green everywhere
-div, section, article, main, aside
-  background-color: transparent
-
-// Ensure all text is visible
-h1, h2, h3, h4, h5, h6, p, span, div
+// Force all text to be black
+h1, h2, h3, h4, h5, h6, p, span, div, a
   color: #000000 !important
-
-// Responsive design
-@media (max-width: 768px)
-  body > header
-    padding: 1rem
-    flex-direction: column
-    gap: 1rem
-  
-  body > header nav
-    gap: 1rem
-  
-  body > article
-    margin: 1rem
-    padding: 1rem
-
-// Dark mode override
-@media (prefers-color-scheme: dark)
-  html
-    background: #D1D8BE !important
-  
-  body
-    background: #D1D8BE !important
-    color: #000000 !important
-  
-  body > header, body > footer
-    background: #D1D8BE !important
-    color: #000000 !important
-  
-  h1, h2, h3, h4, h5, h6, p, span, div
-    color: #000000 !important
