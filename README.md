@@ -4,8 +4,6 @@ permalink: "/about/"
 layout: page
 ---
 
-## About Me/Links
-
 Currently bicoastal between San Francisco and New York. I am more responsive on LinkedIn than Twitter.
 
 - [Github](https://github.com/sumerjoshi)
