@@ -3,23 +3,32 @@
 
 @import index, font, basic, layout, classes
 
-// Define your color variables (no semicolons, no $ in front)
-$new-bg: #D1D8BE
-$new-dark: #2C2C2C
-$light: #FFFFFF
-$border-color: #A0B089
+// Color variables
+$green-bg: #D1D8BE
+$black-text: #000000
 
 html
-  background: $new-bg
+  background: $green-bg
   padding: 0 calc(38% - 22em)
 
 body
-  box-shadow: 0 0 .3em darken($new-bg, 15%)
-  color: #000000
+  background: $green-bg
+  box-shadow: 0 0 .3em darken($green-bg, 15%)
+  color: $black-text
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif
 
+// Make header green too instead of dark
 body > header, body > footer
-  background: $new-dark
-  color: $light
+  background: $green-bg
+  color: $black-text
+  border-bottom: 1px solid darken($green-bg, 10%)
+
+// Navigation links in header
+body > header a
+  color: $black-text
+
+body > header a:hover
+  color: darken($black-text, 20%)
 
 @media (min-width: 32em)
   body > header, body > article, body > footer
@@ -27,13 +36,15 @@ body > header, body > footer
 
 @media (prefers-color-scheme: dark)
   html
-    background: darken($new-bg, 20%)
-  
-  body > header, body > footer
-    background: $new-dark
-  
-  body, body > header, body > footer
-    box-shadow: 0 0 0 1px lighten($new-dark, 15%)
+    background: $green-bg
   
   body
-    color: #FFFFFF
+    background: $green-bg
+    color: $black-text
+  
+  body > header, body > footer
+    background: $green-bg
+    color: $black-text
+  
+  body, body > header, body > footer
+    box-shadow: 0 0 0 1px darken($green-bg, 20%)
