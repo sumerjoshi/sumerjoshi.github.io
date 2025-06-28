@@ -1,77 +1,21 @@
 ---
 ---
 
-// Force white background before any imports
-html
+// Simple white background override
+html, body
   background: #ffffff !important
 
-body
-  background: #ffffff !important
-
-@import index, font, basic, classes
-
-// Header with green bottom border
+// Add the green separator bar
 body > header
-  background: #ffffff !important
-  color: #000000 !important
-  padding: 2rem !important
-  text-align: center !important
-  border-bottom: 4px solid #D1D8BE !important
+  border-bottom: 8px solid #D1D8BE !important
 
-// Name centered at top
-header .title, header a.title
-  color: #000000 !important
-  text-decoration: none !important
-  font-size: 1.8rem !important
-  font-weight: 600 !important
-  display: block !important
-  margin-bottom: 1rem !important
-
-// Content area
-body > article
-  max-width: 700px !important
-  margin: 0 auto !important
-  padding: 3rem 2rem !important
-  color: #000000 !important
-  line-height: 1.6 !important
-  background: #ffffff !important
-
-// Typography
-h1, h2, h3, h4, h5, h6, p, span, div
+// Make sure text is black
+h1, h2, h3, h4, h5, h6, p, span, div, a
   color: #000000 !important
 
-article h1
-  font-size: 1.8rem !important
-  margin-bottom: 1.5rem !important
-
-article p
-  margin-bottom: 1.5rem !important
-  font-size: 1rem !important
-
-// Lists styling
-article ul, article ol
-  margin: 1.5rem 0 !important
-  padding-left: 2rem !important
-
-article li
-  margin-bottom: 0.5rem !important
+// Navigation links in header
+header nav a
   color: #000000 !important
 
-// Links in content get green color
-article a
-  color: #D1D8BE !important
+header nav a:hover
   text-decoration: underline !important
-
-article a:hover
-  color: #A0B089 !important
-
-// Mobile responsive
-@media (max-width: 768px)
-  body > header
-    padding: 1.5rem 1rem !important
-  
-  header .title, header a.title
-    font-size: 1.5rem !important
-    
-  body > article
-    padding: 2rem 1rem !important
