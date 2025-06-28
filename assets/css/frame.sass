@@ -1,9 +1,9 @@
 ---
 ---
 
-@import index, font, basic, layout, classes
+@import index, font, basic, classes
 
-// Clean, simple layout - fix the cutoff issues
+// Clean centered layout that works on all screen sizes
 html
   background: #D1D8BE !important
   padding: 0 !important
@@ -16,63 +16,89 @@ body
   padding: 0 !important
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif !important
 
-// Fix header - ensure it fits properly
+// Centered header that adapts to content
 body > header
   background: #D1D8BE !important
   color: #000000 !important
-  padding: 1.5rem 2rem !important
-  display: flex !important
-  justify-content: space-between !important
-  align-items: center !important
-  width: 100% !important
-  box-sizing: border-box !important
+  padding: 2rem !important
+  text-align: center !important
   border-bottom: 1px solid rgba(0,0,0,0.1) !important
 
+// Name centered at top
 header .title, header a.title
   color: #000000 !important
   text-decoration: none !important
-  font-size: 1.4rem !important
+  font-size: 1.8rem !important
   font-weight: 600 !important
-  flex-shrink: 0 !important
+  display: block !important
+  margin-bottom: 1rem !important
 
-// Fix navigation - make sure it doesn't overflow
+// Navigation centered under name, automatically adjusts
 header nav, header nav ul
   display: flex !important
-  gap: 1.25rem !important
+  justify-content: center !important
+  gap: 2rem !important
   list-style: none !important
   margin: 0 !important
   padding: 0 !important
-  flex-shrink: 0 !important
+  flex-wrap: wrap !important
 
 header nav a
   color: #000000 !important
   text-decoration: none !important
   font-weight: 500 !important
-  white-space: nowrap !important
+  font-size: 1rem !important
 
 header nav a:hover
   text-decoration: underline !important
 
-// Content area - nice and readable
+// Content area - clean and readable
 body > article
   max-width: 700px !important
-  margin: 0 !important
-  padding: 2.5rem 2rem !important
+  margin: 0 auto !important
+  padding: 3rem 2rem !important
   color: #000000 !important
   line-height: 1.6 !important
 
+// Typography
 h1, h2, h3, h4, h5, h6, p, span, div
   color: #000000 !important
 
-// Mobile fix
+article h1
+  font-size: 1.8rem !important
+  margin-bottom: 1.5rem !important
+
+article p
+  margin-bottom: 1.5rem !important
+  font-size: 1rem !important
+
+// Lists styling
+article ul, article ol
+  margin: 1.5rem 0 !important
+  padding-left: 2rem !important
+
+article li
+  margin-bottom: 0.5rem !important
+  color: #000000 !important
+
+// Mobile responsive - stays centered
 @media (max-width: 768px)
   body > header
-    padding: 1rem !important
-    flex-wrap: wrap !important
-    gap: 1rem !important
+    padding: 1.5rem 1rem !important
   
+  header .title, header a.title
+    font-size: 1.5rem !important
+    
   header nav
-    gap: 1rem !important
+    gap: 1.5rem !important
     
   body > article
     padding: 2rem 1rem !important
+    
+@media (max-width: 480px)
+  header nav
+    gap: 1rem !important
+    flex-direction: column !important
+    
+  header nav a
+    font-size: 0.9rem !important
