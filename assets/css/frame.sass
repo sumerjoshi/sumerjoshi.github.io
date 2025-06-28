@@ -1,7 +1,20 @@
 ---
 ---
 
-@import index, font, layout, basic, classes
+@import index, font, basic, classes
+
+// Manual flexbox structure (since we're not importing layout)
+body
+  display: flex !important
+  flex-direction: column !important
+
+body > header
+  display: flex !important
+  flex-direction: column !important
+  align-items: center !important
+
+body > article
+  flex-grow: 1 !important
 
 // Clean centered layout that works on all screen sizes
 html
@@ -15,10 +28,6 @@ body
   margin: 0 !important
   padding: 0 !important
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif !important
-
-//Overriding Layout
-body > header, body > article, body > footer
-  padding: 2rem !important  // Override layout.sass padding
 
 // Centered header that adapts to content
 body > header
