@@ -1,21 +1,72 @@
 ---
 ---
 
+@import index, font, basic, classes
+
 // Simple white background override
 html, body
   background: #ffffff !important
 
-// Add the green separator bar
-body > header
-  border-bottom: 8px solid #D1D8BE !important
+// Manual flexbox structure (replacing layout)
+body
+  display: flex !important
+  flex-direction: column !important
 
-// Make sure text is black
-h1, h2, h3, h4, h5, h6, p, span, div, a
+article
+  flex-grow: 1 !important
+
+// Fix header navigation spacing and centering
+body > header
+  text-align: center !important
+  border-bottom: 12px solid #D1D8BE !important
+  padding: 2rem !important
+  display: flex !important
+  flex-direction: column !important
+  align-items: center !important
+
+// Center your name and add space below
+header .title, header a.title
+  display: block !important
+  margin-bottom: 1rem !important
   color: #000000 !important
 
-// Navigation links in header
+// Fix navigation spacing and centering
+header nav
+  display: flex !important
+  justify-content: center !important
+  gap: 2rem !important
+  margin: 0 !important
+
 header nav a
   color: #000000 !important
+  text-decoration: none !important
 
 header nav a:hover
   text-decoration: underline !important
+
+// Content area
+body > article
+  padding: 2rem !important
+
+// Make most text black
+h1, h2, h3, h4, h5, h6, p, span, div, li, time
+  color: #000000 !important
+
+// Content links - dark green
+article a
+  color: #2D4A2B !important
+  text-decoration: underline !important
+
+article a:hover
+  color: #1A2E19 !important
+
+// Any other links in content - dark green
+a
+  color: #2D4A2B !important
+
+a:hover
+  color: #1A2E19 !important
+
+// Force list items to be black
+ul li, ol li
+  color: #000000 !important
