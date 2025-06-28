@@ -1,41 +1,13 @@
 ---
 ---
 
-@import index, font, basic, classes
-
-// Manual flexbox structure (since we're not importing layout)
-body
-  display: flex !important
-  flex-direction: column !important
-
+// Header with green bottom border
 body > header
-  display: flex !important
-  flex-direction: column !important
-  align-items: center !important
-
-body > article
-  flex-grow: 1 !important
-
-// Clean centered layout that works on all screen sizes
-html
-  background: #D1D8BE !important
-  padding: 0 !important
-  margin: 0 !important
-
-body
-  background: #D1D8BE !important
-  color: #000000 !important
-  margin: 0 !important
-  padding: 0 !important
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif !important
-
-// Centered header that adapts to content
-body > header
-  background: #D1D8BE !important
+  background: #ffffff !important
   color: #000000 !important
   padding: 2rem !important
   text-align: center !important
-  border-bottom: 1px solid rgba(0,0,0,0.1) !important
+  border-bottom: 4px solid #D1D8BE !important
 
 // Name centered at top
 header .title, header a.title
@@ -46,32 +18,14 @@ header .title, header a.title
   display: block !important
   margin-bottom: 1rem !important
 
-// Navigation centered under name, automatically adjusts
-header nav, header nav ul
-  display: flex !important
-  justify-content: center !important
-  gap: 2rem !important
-  list-style: none !important
-  margin: 0 !important
-  padding: 0 !important
-  flex-wrap: wrap !important
-
-header nav a
-  color: #000000 !important
-  text-decoration: none !important
-  font-weight: 500 !important
-  font-size: 1rem !important
-
-header nav a:hover
-  text-decoration: underline !important
-
-// Content area - clean and readable
+// Content area
 body > article
   max-width: 700px !important
   margin: 0 auto !important
   padding: 3rem 2rem !important
   color: #000000 !important
   line-height: 1.6 !important
+  background: #ffffff !important
 
 // Typography
 h1, h2, h3, h4, h5, h6, p, span, div
@@ -94,7 +48,15 @@ article li
   margin-bottom: 0.5rem !important
   color: #000000 !important
 
-// Mobile responsive - stays centered
+// Links in content get green color
+article a
+  color: #D1D8BE !important
+  text-decoration: underline !important
+
+article a:hover
+  color: #A0B089 !important
+
+// Mobile responsive
 @media (max-width: 768px)
   body > header
     padding: 1.5rem 1rem !important
@@ -102,16 +64,5 @@ article li
   header .title, header a.title
     font-size: 1.5rem !important
     
-  header nav
-    gap: 1.5rem !important
-    
   body > article
     padding: 2rem 1rem !important
-    
-@media (max-width: 480px)
-  header nav
-    gap: 1rem !important
-    flex-direction: column !important
-    
-  header nav a
-    font-size: 0.9rem !important
