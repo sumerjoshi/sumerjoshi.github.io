@@ -18,7 +18,7 @@ show_social: false
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "README.md", title: "About"}
-  - {title: "Blog", file: "blog.md"}
+  - {title: "Posts", file: "posts.md"}
   - {title: "Projects", file: "projects.md"}
   
 
