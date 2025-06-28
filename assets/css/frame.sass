@@ -24,12 +24,16 @@ body > header
   flex-direction: column !important
   align-items: center !important
 
-// Center your name and add space below
 header .title, header a.title
   display: block !important
   margin-bottom: 1rem !important
   color: #000000 !important
+  text-decoration: none !important
+  transition: opacity 0.2s ease !important
 
+header .title:hover, header a.title:hover
+  opacity: 0.7 !important  // Subtle opacity change on hover
+  cursor: pointer !important
 // Fix navigation spacing and centering
 header nav
   display: flex !important
